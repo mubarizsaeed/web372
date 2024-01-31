@@ -1,0 +1,38 @@
+
+h1 {
+    color: #007bff; /* Blue color */
+  }
+  
+  
+  p {
+    color: #28a745; /* Green color */
+  }
+  
+  
+  h1 {
+    font-family: Arial, sans-serif; /* Change font family */
+    font-size: 24px; /* Change font size */
+    font-weight: bold; /* Change font weight */
+  }
+  
+  
+  p {
+    font-family: "Times New Roman", serif; /* Change font family */
+    font-size: 16px; /* Change font size */
+    font-style: italic; /* Change font style */
+  }
+  
+  
+  body {
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  
+  
