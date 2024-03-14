@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'SF Compact Display Black';
+    src: url('../font/SF-Compact-Display-Black.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SF Compact Display Black', sans-serif;
+    color: lightpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    z-index: 100;
+}
+
+#designs-section {
+    padding-top: 100px; /* Adjust this value based on the actual header height */
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: auto;
+    max-width: 70px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: lightpink;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation a {
+    color: lightpink;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation a:not(:last-child) {
+    margin-right: 30px;
+}
+
+.navigation a:hover {
+    background: lightpink;
+    color: #fff;
+}
+
+#authForm {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 40px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s;
+    overflow: auto;
+}
+
+#authForm label,
+#authForm input,
+#authForm button {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#authForm input,
+#authForm button {
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+#authForm button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#authForm button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    text-align: center;
+    overflow: auto;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#join-message-container {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: lightpink;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+    .navigation {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0 10px;
+    }
+
+    .navigation a {
+        padding: 5px 10px;
+        font-size: 14px; 
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo, .navigation {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #designs-section {
+        padding-top: 150px; 
+    }
+}
+

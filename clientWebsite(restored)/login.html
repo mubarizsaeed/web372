@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley Creates.com</title>
+    <link rel="stylesheet" href="css/stylelogin.css">
+    
+</head>
+
+<body>
+    <section class="app-section" id="designs-section">
+        <header>
+            <div class="logo">
+                <img src="images/LogoRiley.png" alt="Logo" class="logo-image">
+                <h2><a href="home.html" class="logo-text">RileyCreates</a></h2>
+            </div>
+
+            <div class="navigation">
+                <a href="home.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="virtual gallery.html">Virtual gallery</a>
+                <a href="login.html">Login/Sign up</a>
+            </div>
+        </header>
+        <div id="join-message-container"></div>
+        <form id="authForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <button id="toggleAuthMode" type="button">Switch to Sign Up</button>
+            <button id="runScriptButton" type="button">Login</button>
+
+        </form>
+        <div id="result"></div>
+
+    </section>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+   
+     <script src="js/toggle.js"></script>
+     <script src="js/login.js"></script>
+     <script src="js/load-join-message.js"></script>    
+
+</body>
+
+</html>
