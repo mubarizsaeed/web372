@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+    <image>
+        <src>images/butterfly.png</src>
+        <alt>Butterfly Image</alt>
+        <animationClass>big-type-animation</animationClass>
+    </image>
+    <text>
+        Riley Gordon
+    </text>
+</content>

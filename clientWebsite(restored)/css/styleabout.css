@@ -1,0 +1,227 @@
+/* Global styles */
+@font-face {
+    font-family: 'SF Compact Display Black';
+    src: url('../font/SF-Compact-Display-Black.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Compact Display Black';
+    color: lightpink;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.text-container p {
+    font-family: 'SF Pro', sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo-image {
+    height: auto;
+    max-width: 70px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: lightpink;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation a {
+    color: lightpink;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.navigation a:not(:last-child) {
+    margin-right: 30px;
+}
+
+.navigation a:hover {
+    background: lightpink;
+    color: #fff;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.about-me-image {
+    flex: 0 0 50%;
+    max-width: 75%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+
+
+.content p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    word-spacing: normal; 
+    letter-spacing: normal;
+    margin: 20px 0; 
+    padding: 0; 
+    max-width: 100%; 
+}
+
+
+.big-type-animation {
+    animation: bigTypeAnimation 1s ease forwards;
+}
+
+@keyframes bigTypeAnimation {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+
+.animated-text {
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.5rem); 
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+    
+    white-space: normal; 
+    overflow: visible; 
+    text-overflow: clip; 
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.header-text-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-text {
+    font-size: 3rem;
+    color: lightpink;
+    margin-bottom: 10px;
+}
+
+.butterfly-image {
+    width: 25%; 
+    max-width: 100%; 
+    margin-top: 100px;
+    position: relative;
+    right: 20%;
+    top: 10%;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 2%;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px; /* Adjusted for space between logo and navigation */
+    }
+
+    .navigation a {
+        padding: 5px 10px;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .logo-text, .navigation a {
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column; 
+        align-items: center; 
+        margin: 20px;
+    }
+
+    .about-me-image {
+        flex: 0 0 100%; 
+        max-width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .content p {
+        max-width: 100%; 
+        text-align: center; 
+    }
+
+    .butterfly-image {
+        width: 50%;
+        position: static; 
+        margin: 0 auto; 
+        margin-top: 20px; 
+    }
+}
+
+.text-container {
+    position: static;
+    width: auto;
+    padding: 10px; 
+    text-align: center; 
+}
+
+.app-section {
+    position: relative; 
+    min-height: 100vh;
+}

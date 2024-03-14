@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sound API Example</title>
+</head>
+<body>
+    <div id="soundInfo">Click the image to play the sound!</div>
+    <img src="images/clouds_1.webp" alt="Clickable Image" id="clickableImage" style="cursor: pointer;">
+
+    <script>
+        // Assuming this is your Freesound API key
+        const apiKey = 'ZPsLj3qCSzIfuaoLHbTlpgfq7nGgeQcF7kSsaqiS';
+        const soundId = '727486'; // The ID of the sound you want to use
+        const soundInfoDiv = document.getElementById('soundInfo');
+        let audio = new Audio(); // Initialize an Audio object outside to be reused
+
+        document.getElementById('clickableImage').addEventListener('click', () => {
+            if (!audio.src) {
+                // Use the Freesound API to get the actual direct URL to the sound file
+                fetch(`https://freesound.org/apiv2/sounds/${soundId}/?token=${apiKey}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        audio.src = data.previews['preview-hq-mp3']; // Assign the direct sound URL
+                        soundInfoDiv.innerHTML = `Playing sound: ${data.name} by ${data.username}`;
+                        audio.play().catch(e => console.error('Error playing sound:', e));
+                    })
+                    .catch(error => console.error('Error fetching sound:', error));
+            } else {
+                // If we already have the sound URL, play it
+                audio.play().catch(e => console.error('Error replaying sound:', e));
+            }
+        });
+    </script>
+</body>
+</html>
